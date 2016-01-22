@@ -31,29 +31,29 @@
 
 <p>package main</p>
 
-<p>import (
-    "fmt"
-    "log"
-    "net/http"
-    "os"
-)</p>
+<p><code>import (</code>
+    <code>"fmt"</code>
+    <code>"log"</code>
+    <code>"net/http"</code>
+    <code>"os"</code>
+<code>)</code></p>
 
-<p>var n int = 1
-var idstr string</p>
+<p><code>var n int = 1</code>
+<code>var idstr string</code></p>
 
-<p>func HelloServer(w http.ResponseWriter, req *http.Request) {
-    fmt.Fprintf(w, "Hello World %s %d\n", idstr, n)
-    n = n + 1
-}</p>
+<p><code>func HelloServer(w http.ResponseWriter, req *http.Request) {</code>
+    <code>fmt.Fprintf(w, "Hello World %s %d\n", idstr, n)</code>
+    <code>n = n + 1</code>
+<code>}</code></p>
 
-<p>func main() {
-    idstr = os.Args[1]
-    http.HandleFunc("/hello", HelloServer)
-    err := http.ListenAndServe(":12345", nil)
-    if err != nil {
-        log.Fatal("ListenAndServe: ", err)
-    }
-}</p>
+<p><code>func main() {</code>
+    <code>idstr = os.Args[1]</code>
+    <code>http.HandleFunc("/hello", HelloServer)</code>
+    <code>err := http.ListenAndServe(":12345", nil)</code>
+    <code>if err != nil {</code>
+        <code>log.Fatal("ListenAndServe: ", err)</code>
+    <code>}</code>
+<code>}</code></p>
       </section>
     </div>
 
